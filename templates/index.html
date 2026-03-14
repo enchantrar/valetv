@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Nostalji TV — 95–2005 Türk Televizyonu{% endblock %}
+
+{% block content %}
+<div class="stage">
+
+  <!-- SİT-COM KOLONU -->
+  <div class="col">
+    <div class="col-head">
+      <div class="col-title">
+        <span class="dot dot-purple"></span>Sit-com
+      </div>
+      <div class="filters">
+        <span class="pill on" data-col="sitcom" data-sort="popular">Popüler</span>
+        <span class="pill"    data-col="sitcom" data-sort="az">A–Z</span>
+        <span class="pill"    data-col="sitcom" data-sort="year">Yıla göre</span>
+      </div>
+    </div>
+    <div class="col-body" id="col-sitcom">
+      {% for p in sitcom %}
+      <div class="row" data-slug="{{ p.slug }}" data-year="{{ p.year_start }}">
+        <div class="rthumb tc-{{ p.thumb_color }}">{{ p.thumb }}</div>
+        <div class="rinfo">
+          <div class="rname">{{ p.name }}</div>
+          <div class="rmeta">{{ p.channel }} · {{ p.years }}</div>
+        </div>
+        <div class="row-right">
+          {% if p.youtube_available %}<span class="ytag">YT</span>{% endif %}
+          <span class="fav-star" data-slug="{{ p.slug }}">&#9733;</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- REALİTY & YARIŞMA KOLONU -->
+  <div class="col">
+    <div class="col-head">
+      <div class="col-title">
+        <span class="dot dot-coral"></span>Reality & yarışma
+      </div>
+      <div class="filters">
+        <span class="pill on" data-col="reality" data-sort="popular">Popüler</span>
+        <span class="pill"    data-col="reality" data-sort="az">A–Z</span>
+        <span class="pill"    data-col="reality" data-sort="year">Yıla göre</span>
+      </div>
+    </div>
+    <div class="col-body" id="col-reality">
+      {% for p in reality %}
+      <div class="row" data-slug="{{ p.slug }}" data-year="{{ p.year_start }}">
+        <div class="rthumb tc-{{ p.thumb_color }}">{{ p.thumb }}</div>
+        <div class="rinfo">
+          <div class="rname">{{ p.name }}</div>
+          <div class="rmeta">{{ p.channel }} · {{ p.years }}</div>
+        </div>
+        <div class="row-right">
+          {% if p.youtube_available %}<span class="ytag">YT</span>{% endif %}
+          <span class="fav-star" data-slug="{{ p.slug }}">&#9733;</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- EĞLENCE ŞOVLARI KOLONU -->
+  <div class="col">
+    <div class="col-head">
+      <div class="col-title">
+        <span class="dot dot-teal"></span>Eğlence şovları
+      </div>
+      <div class="filters">
+        <span class="pill on" data-col="show" data-sort="popular">Popüler</span>
+        <span class="pill"    data-col="show" data-sort="az">A–Z</span>
+        <span class="pill"    data-col="show" data-sort="year">Yıla göre</span>
+      </div>
+    </div>
+    <div class="col-body" id="col-show">
+      {% for p in show %}
+      <div class="row" data-slug="{{ p.slug }}" data-year="{{ p.year_start }}">
+        <div class="rthumb tc-{{ p.thumb_color }}">{{ p.thumb }}</div>
+        <div class="rinfo">
+          <div class="rname">{{ p.name }}</div>
+          <div class="rmeta">{{ p.channel }} · {{ p.years }}</div>
+        </div>
+        <div class="row-right">
+          {% if p.youtube_available %}<span class="ytag">YT</span>{% endif %}
+          <span class="fav-star" data-slug="{{ p.slug }}">&#9733;</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- DRAWER ve SIDE-PANEL base.html'den geliyor -->
+  <div class="overlay" id="overlay"></div>
+
+</div>
+{% endblock %}

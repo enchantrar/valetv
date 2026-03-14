@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "dadi",
+    "name": "Dadı",
+    "category": "sitcom",
+    "channel": "Show TV / Star TV",
+    "years": "2001–2002",
+    "year_start": 2001,
+    "genre": "Sit-com",
+    "summary": "Yıllar önce gelinlik dükkanında çalışan Melek, sevgilisinden ayrılınca işini de kaybeder. Tesadüf eseri eşini kaybetmiş iş adamı Ömer Giritli'nin üç çocuğuna dadı olarak işe girer.",
+    "youtube_available": true,
+    "youtube_channel": "https://www.youtube.com/@DadiDizisi",
+    "episodes": [
+      { "title": "1. Bölüm", "youtube_id": "BURAYA_ID" },
+      { "title": "2. Bölüm", "youtube_id": "BURAYA_ID" }
+    ],
+    "cast": [
+      { "name": "Gülben Ergen",  "role": "Dadı Melek Özbal" },
+      { "name": "Kenan Işık",    "role": "Ömer Giritli" },
+      { "name": "Haldun Dormen", "role": "Uşak Pertev" },
+      { "name": "Seray Sever",   "role": "Suzan Erdemir" }
+    ],
+    "thumb": "DAD",
+    "thumb_color": "purple"
+  },
+  {
+    "slug": "biri-bizi-gozetliyor",
+    "name": "Biri Bizi Gözetliyor",
+    "category": "reality",
+    "channel": "Show TV",
+    "years": "2001–2004",
+    "year_start": 2001,
+    "genre": "Reality",
+    "summary": "Türkiye'nin ilk reality show'u. İstanbul'da bir apartmanda birlikte yaşayan yarışmacılar her hafta birini eliyor.",
+    "youtube_available": true,
+    "youtube_channel": "",
+    "episodes": [
+      { "title": "1. Sezon 1. Bölüm", "youtube_id": "BURAYA_ID" }
+    ],
+    "cast": [
+      { "name": "Acun Ilıcalı", "role": "Yapımcı / Sunucu" },
+      { "name": "Öykü Serter",  "role": "Sunucu" }
+    ],
+    "thumb": "BBG",
+    "thumb_color": "coral"
+  },
+  {
+    "slug": "ibo-show",
+    "name": "İbo Show",
+    "category": "show",
+    "channel": "ATV",
+    "years": "1993–2009",
+    "year_start": 1993,
+    "genre": "Eğlence",
+    "summary": "İbrahim Tatlıses'in sunduğu, dönemin en popüler sanatçılarının konuk olduğu eğlence ve talk show.",
+    "youtube_available": true,
+    "youtube_channel": "",
+    "episodes": [
+      { "title": "Seçki Bölüm", "youtube_id": "BURAYA_ID" }
+    ],
+    "cast": [
+      { "name": "İbrahim Tatlıses", "role": "Sunucu" }
+    ],
+    "thumb": "İBO",
+    "thumb_color": "teal"
+  }
+]

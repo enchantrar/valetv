@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Nostalji TV{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="/" class="logo">Nostalji TV</a>
+    <input class="search" type="text" placeholder="Program ara..." id="search-input">
+    <div class="topbar-right">
+      <button class="icon-btn" id="btn-random">&#9654; Rastgele</button>
+      <button class="icon-btn" id="btn-favs">&#9733; Favoriler <span class="badge" id="fav-count">0</span></button>
+      <button class="icon-btn" id="btn-history">&#9679; Geçmiş</button>
+    </div>
+  </nav>
+
+  {% block content %}{% endblock %}
+
+  <!-- DRAWER -->
+  <div class="overlay" id="overlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="close-btn" id="drawer-close">✕ Kapat</button>
+      <div class="d-thumb" id="d-thumb"></div>
+      <div class="d-title" id="d-title"></div>
+      <div class="d-pills">
+        <span class="d-pill" id="d-years"></span>
+        <span class="d-pill" id="d-channel"></span>
+        <span class="d-pill" id="d-genre"></span>
+      </div>
+      <div class="d-actions">
+        <button class="d-btn" id="d-fav-btn">&#9733; Favoriye ekle</button>
+        <button class="d-btn" id="d-yt-btn">&#9654; İzle</button>
+      </div>
+    </div>
+    <div class="embed-area" id="embed-area">
+      <div class="embed-placeholder" id="embed-placeholder">
+        <button class="play-btn" id="play-btn">&#9654;</button>
+        <span class="embed-label">Oynatmak için tıkla</span>
+      </div>
+      <div id="embed-frame"></div>
+    </div>
+    <div class="drawer-body">
+      <div class="sec-label">Kadro</div>
+      <div id="d-cast"></div>
+    </div>
+  </div>
+
+  <!-- FAVORİLER / GEÇMİŞ PANELİ -->
+  <div class="side-panel" id="side-panel">
+    <div class="sp-head">
+      <span class="sp-title" id="sp-title">Favoriler</span>
+      <button class="close-btn" id="sp-close">✕</button>
+    </div>
+    <div class="sp-tabs">
+      <div class="sp-tab on" id="tab-fav">Favoriler</div>
+      <div class="sp-tab" id="tab-hist">Geçmiş</div>
+    </div>
+    <div class="sp-body" id="sp-body"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
