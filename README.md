@@ -1,2 +1,2 @@
 # TeleValeTV
-Millenials TV archive for Turkish nostalgia
+Millenials archive for Turkish TV nostalgia
